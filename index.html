@@ -27,6 +27,7 @@
         <link href="css/aos.css" rel="stylesheet">
 
         <link href="css/templatemo-nomad-force.css" rel="stylesheet">
+        <link href="css/botton.css" rel="stylesheet">
 <!--
 
 TemplateMo 567 Nomad Force
@@ -35,7 +36,7 @@ https://templatemo.com/tm-567-nomad-force
 
 -->
     </head>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <body>
     
         <main>
@@ -505,6 +506,21 @@ https://templatemo.com/tm-567-nomad-force
         <script src="js/magnific-popup-options.js"></script>
         <script src="js/scrollspy.min.js"></script>
         <script src="js/custom.js"></script>
-
+        
+        <button type="button" id="BackTop" class="toTop-arrow"></button>
+        <script>
+        $(function(){
+            $('#BackTop').click(function(){ 
+                $('html,body').animate({scrollTop:0}, 333);
+            });
+            $(window).scroll(function() {
+                if ( $(this).scrollTop() > 300 ){
+                    $('#BackTop').fadeIn(222);
+                } else {
+                    $('#BackTop').stop().fadeOut(222);
+                }
+            }).scroll();
+        });
+        </script>
     </body>
 </html>
